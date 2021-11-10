@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: logo;
+    src: url('./media/Androgyne_TB.otf');
+}
+@font-face {
+    font-family: roboto;
+    src: url('./media/Roboto-Medium.ttf');
+}
+$background: linear-gradient(to bottom, rgb(255, 230, 0),rgb(248, 182, 1));
+$blue: rgb(0, 140, 255);
+body{
+    background: $background;
+}
+.container.login{
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    color: white;
+    font-family: logo;
+    font-size: 3rem;
+    text-align: center;
+}
+.logo{
+    span{
+        color: $blue;
+    }
+}
+.userName{
+    width: 400px;
+    height: 60px;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    opacity: 0.4;
+    transition: all 500ms ease;
+    outline: none;
+    border: none;
+}
+.userName:focus{
+    opacity: 0.9;
+  
+    
+}
+.password{
+    width: 400px;
+    height: 60px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    opacity: 0.4;
+    outline: none;
+    border: none;
+}
+.log{
+    display: flex;
+    flex-direction: column;
+}
+.loginBtn{
+    height: 40px;
+    width: 100px;
+    background:$blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+  
+}
+.loginBtn{
+    span{
+        color: white;
+        position: absolute;
+        z-index: 1;
+        transition: all ease 1s;
+    }
+}
+
+.loginBtn:hover{
+    
+    opacity: 0.7;
+}
+.groupUsername{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.modal{
+    h1{
+        font-family: logo;
+        color: white;
+    }
+}
+.groupPassword{
+    display: flex;
+    flex-direction: column;
+}
+.modal{
+    background: $blue;
+    height: 500px;
+    width: 500px;
+    display:none;
+   
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.register{
+    text-align: right;
+    width: 95%;
+    margin-top: 30px;
+    color: $blue;
+    font-family: roboto;
+    cursor: pointer;
+}
+.register:hover{
+    text-decoration: underline;
+}
+.modal.active{
+    opacity: 1;
+    z-index: 5;
+}
+.modal{
+    label{
+        color: white;
+    }
+}
+label{
+    font-family: roboto;
+}
+.registerBtn{
+    height: 40px;
+    width: 100px;
+    background:$background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    color: white;
+}
+.modalPassword{
+    margin-bottom: 10px;
+}
+.modalUsername,.modalPassword,.modalPasswordenter{
+    height: 30px;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+.modalUsername:focus,.modalPassword:focus,.modalPasswordenter:focus{
+    font-family: roboto;
+    opacity: 0.9;
+}
+.smallPrint{
+    margin-top: 10px;
+    font-size: 0.7rem;
+    color: white;
+    display:none;
+}
+.closeBtn{
+    color: white;
+  
+    font-size: 1.5rem;
+    text-align: right;
+    width: 90%;
+    margin-top:-30px;
+}
+input{
+    outline: none;
+    border: none;
+}
+
