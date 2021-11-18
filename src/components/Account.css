@@ -1,0 +1,252 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: logo;
+  src: url("./media/Androgyne_TB.otf");
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("./media/Roboto-Medium.ttf");
+}
+
+.container {
+  width: 85%;
+  margin: 50px auto;
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcomeTxt {
+  color: white;
+  font-family: roboto;
+  text-align: center;
+}
+
+.transactionModal {
+  height: 570px;
+  width: 330px;
+  background: rgba(255, 255, 255, 0.082);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 45%;
+  left: 50%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.balanceHeader, .balanceModal, .balance, .currentHeader {
+  text-align: center;
+  color: white;
+  font-family: roboto;
+}
+
+.inputTransaction, .inputAmount, .inputRecipient {
+  margin-top: 20px;
+}
+
+.inputTransaction {
+  width: 170px;
+  font-family: roboto;
+  font-size: 1.2rem;
+  background-size: contain;
+  border: none;
+  color: #0775f3;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background: rgba(255, 255, 255, 0.486);
+}
+
+.inputRecipient {
+  display: none;
+}
+
+label {
+  color: white;
+  font-family: roboto;
+  margin-right: 20px;
+  display: block;
+}
+
+.transactionModal input {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.486);
+  padding-left: 10px;
+  font-family: roboto;
+  font-size: 1rem;
+  color: white;
+}
+
+.transactionHeader {
+  color: white;
+  text-align: center;
+}
+
+.confirmBtn {
+  height: 40px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe600), to(#f8b601));
+  background: linear-gradient(to bottom, #ffe600, #f8b601);
+}
+
+.confirmBtn span {
+  font-family: roboto;
+}
+
+.closeBtn {
+  position: relative;
+  top: 20px;
+  right: -10px;
+}
+
+.far {
+  cursor: pointer;
+}
+
+.balanceCard {
+  padding: 10px;
+  width: 400px;
+  border-radius: 25px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.082);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.082);
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.123)), to(rgba(255, 255, 255, 0.233)));
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.233));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.transactionBtn {
+  width: 150px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe600), to(#f8b601));
+  background: linear-gradient(to bottom, #ffe600, #f8b601);
+  font-family: roboto;
+  color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  -webkit-transition: 500ms ease all;
+  transition: 500ms ease all;
+}
+
+.transactionCard {
+  height: 100px;
+  font-family: roboto;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 20px;
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.123)), to(rgba(255, 255, 255, 0.233)));
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.233));
+  margin: 20px auto;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.144);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.144);
+}
+
+.errorTxt {
+  color: white;
+  text-align: center;
+  font-family: roboto;
+}
+
+.transactionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.confirmBtn:hover, .transactionBtn:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media screen and (max-width: 428px) {
+  .balanceCard {
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .balanceCard {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .balanceCard {
+    width: 310px;
+  }
+  .transactionCard {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=Account.css.map */

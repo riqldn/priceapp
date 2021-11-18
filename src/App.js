@@ -1,9 +1,21 @@
 
-import Home from "./components/Home";
+import Login from "./components/Login";
+import React from 'react';
+
+import Account from "./components/Account";
+import {Route,Routes } from "react-router-dom";
+
+
 function App() {
   return (
 <>
-<Home/>
+
+<Routes>
+<Route path='/' element={<Login/>}>
+</Route>
+<Route path='/account' element={<Account/>}/>
+</Routes>
+
 </>
   );
 }

@@ -13,6 +13,7 @@ $background: linear-gradient(to bottom, rgb(255, 230, 0),rgb(248, 182, 1));
 $blue: rgb(0, 140, 255);
 body{
     background: $background;
+    
 }
 .container.login{
     height: 100vh;
@@ -72,7 +73,8 @@ body{
     align-items: center;
     margin: 20px 0;
     cursor: pointer;
-  
+    border-radius: 20px;
+    transition: 500ms all ease;
 }
 .loginBtn{
     span{
@@ -86,6 +88,7 @@ body{
 .loginBtn:hover{
     
     opacity: 0.7;
+    transform: scale(1.05);
 }
 .groupUsername{
     display: flex;
@@ -116,6 +119,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    box-shadow: 5px 9px 30px black;
     
 }
 .register{
@@ -128,10 +132,6 @@ body{
 }
 .register:hover{
     text-decoration: underline;
-}
-.modal.active{
-    opacity: 1;
-    z-index: 5;
 }
 .modal{
     label{
@@ -158,8 +158,9 @@ label{
 .modalUsername,.modalPassword,.modalPasswordenter{
     height: 30px;
     font-size: 1.2rem;
-    opacity: 0.6;
+    opacity: 0.3;
 }
+
 .modalUsername:focus,.modalPassword:focus,.modalPasswordenter:focus{
     font-family: roboto;
     opacity: 0.9;
@@ -178,8 +179,60 @@ label{
     width: 90%;
     margin-top:-30px;
 }
+.registerBtn{
+    font-family: roboto;
+}
 input{
     outline: none;
     border: none;
+}
+@media screen and (max-width:426px){
+    .modal{
+        width: 340px;
+        margin: 0 auto;
+    }
+    .userName{
+        width: 300px;
+        margin:20px auto;
+    }
+    .password{
+        width: 300px;
+    }
+    .container.login{
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50px);
+    }
+    
+}
+@media screen and (max-width:321px){
+    .modal{
+        width: 300px;
+        align-items: center;
+    }
+    .modalInner{
+        h1{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    .closeBtn{
+        transform: translateY(-30px);
+    }
+    .modalUsername,.modalPassword,.modalPasswordenter{
+        width: 250px;
+    }
+    .groupPassword{
+        justify-content: center;
+        align-items: center;
+    }
+    .registerBtn{
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+    .groupUsername{
+        align-items: center;
+    }
 }
 
